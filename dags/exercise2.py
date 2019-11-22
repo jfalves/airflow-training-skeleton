@@ -45,4 +45,9 @@ the_end = DummyOperator(
         dag=dag
         )
 
-print_timestamp >> [wait_1,wait_5,wait_10] >> the_end
+print_timestamp >> wait_1
+print_timestamp >> wait_5
+print_timestamp >> wait_10
+wait_1 >> the_end
+wait_5 >> the_end
+wait_10 >> the_end
