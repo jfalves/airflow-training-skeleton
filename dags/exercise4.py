@@ -1,6 +1,7 @@
 import airflow
 from airflow import DAG
 from airflow.contrib.operators.postgres_to_gcs_operator import PostgresToGoogleCloudStorageOperator
+from airflow.operators.dummy_operator import DummyOperator
 from datetime import datetime
 
 dag = DAG(
@@ -21,5 +22,9 @@ postgres_to_google_cloud = PostgresToGoogleCloudStorageOperator(
         dag=dag
         )
 
-postgres_to_google_cloud
+dummy = DummyOperator (
+        task_id="dummy"
+        )
+
+postgres_to_google_cloud >> dummy
 
