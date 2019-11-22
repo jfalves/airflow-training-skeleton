@@ -26,7 +26,7 @@ postgres_to_google_cloud = PostgresToGoogleCloudStorageOperator(
 http_to_google_cloud = HttpToGcsOperator(
         task_id="http_to_google_cloud",
         method="GET",
-        endpoint="https://api.exchangeratesapi.io/history?start_at=2019-09-20&end_at=2019-09-27&symbols=EUR&base=GBP",
+        endpoint="/history?start_at=2019-09-20&end_at=2019-09-27&symbols=EUR&base=GBP",
         gcs_bucket="airflow-training-data-jalves",
         gcs_path="exchange.json",
         dag=dag
