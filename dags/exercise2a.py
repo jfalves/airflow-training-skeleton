@@ -6,10 +6,11 @@ from airflow.operators.dummy_operator import DummyOperator
 from datetime import datetime
 
 dag = DAG(
-        dag_id="exercise2",
+            dag_id="exercise2a",
         default_args={
             "owner":"jonathan",
-            "start_date":airflow.utils.dates.days_ago(3),
+            "start_date":airflow.utils.dates.days_ago(5),
+            "schedule_interval":"@daily",
             },
         )
 
