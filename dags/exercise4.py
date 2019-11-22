@@ -9,7 +9,7 @@ dag = DAG(
             dag_id="exercise4",
             default_args={
                 "owner":"jonathan",
-                "start_date":datetime(2019,9,20)
+                "start_date":datetime(2019,9,20),
             },
             schedule_interval="0 0 * * *"
         )
