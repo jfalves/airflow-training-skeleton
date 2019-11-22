@@ -12,7 +12,7 @@ dag = DAG(
             schedule_interval="0 0 * * *"
         )
 
-postgres_to_google_cloud = PostgresToGoogleCloudOperator(
+postgres_to_google_cloud = PostgresToGoogleCloudStorageOperator(
         task_id="postgres_to_google_cloud",
         sql="SELECT * FROM land_registry_price_paid_uk WHERE transfer_date = '{{ ds }}'",
         bucket="airflow-training-data-jalves",
