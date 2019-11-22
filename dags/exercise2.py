@@ -18,7 +18,7 @@ def print_timestamp():
 
 print_timestamp = PythonOperator(
         task_id="print_timestamp",
-        python_callable=print_timestamp(),
+        python_callable=print_timestamp,
         provide_context=False,
         dag=dag)
 
