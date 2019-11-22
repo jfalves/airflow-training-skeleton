@@ -29,7 +29,7 @@ wait_1 = BashOperator(
         )
 
 wait_5 = BashOperator(
-        task_id="wait_1",
+        task_id="wait_5",
         bash_command="sleep 5",
         dag=dag
         )
