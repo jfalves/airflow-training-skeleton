@@ -1,6 +1,7 @@
 import airflow
 from airflow import DAG
 from airflow.contrib.operators.postgres_to_gcs_operator import PostgresToGoogleCloudStorageOperator
+from airflow_training.operators.http_to_gcs_operator import PostgresToGcsOperator
 from airflow.operators.dummy_operator import DummyOperator
 from datetime import datetime
 
