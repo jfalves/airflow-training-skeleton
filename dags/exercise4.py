@@ -24,7 +24,8 @@ postgres_to_google_cloud = PostgresToGoogleCloudStorageOperator(
         )
 
 dummy = DummyOperator (
-        task_id="dummy"
+        task_id="dummy",
+        dag=dag
         )
 
 postgres_to_google_cloud >> dummy
