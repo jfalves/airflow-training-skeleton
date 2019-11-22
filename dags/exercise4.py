@@ -1,6 +1,6 @@
 import airflow
 from airflow import DAG
-from airflow.operators.postgres_to_gcs_operator import PostgresToGoogleCloudStorageOperator
+from airflow.contrib.operators.postgres_to_gcs_operator import PostgresToGoogleCloudStorageOperator
 from datetime import datetime
 
 dag = DAG(
