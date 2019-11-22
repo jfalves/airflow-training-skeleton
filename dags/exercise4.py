@@ -14,8 +14,7 @@ dag = DAG(
 
 postgres_to_google_cloud = Postgresoperator(
         task_id="postgres_to_google_cloud",
-        sql="SELECT * FROM land_registry_price_paid_uk WHERE 
-        transfer_date = '{{ ds }}'",
+        sql="SELECT * FROM land_registry_price_paid_uk WHERE transfer_date = '{{ ds }}'",
         bucket="airflow-training-data-jalves",
         filename="{{ ds }}/properties_{}.json",
         postgres_conn_id="airflow-training",
@@ -23,3 +22,4 @@ postgres_to_google_cloud = Postgresoperator(
         )
 
 postgres_to_google_cloud
+
