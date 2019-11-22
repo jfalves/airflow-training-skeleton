@@ -14,7 +14,7 @@ dag = DAG(
         )
 
 def print_timestamp():
-    print(datetime.now())
+    print(str(datetime.now()))
 
 print_timestamp = PythonOperator(
         task_id="print_timestamp",
