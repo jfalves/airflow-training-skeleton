@@ -17,7 +17,7 @@ dag = DAG(
 def print_weekday(**context):
     print(context["execution_date"])
 
-def _context(**context):
+def _branching(**context):
     weekday_person_to_email = {
             0: "Bob", # Monday
             1: "Joe", # Tuesday
